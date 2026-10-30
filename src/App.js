@@ -4,7 +4,8 @@ import { Navigation } from "./Navigation";
 import { Footer } from "./Footer";
 import { Privacy } from "./Privacy";
 import { Terms } from "./Terms";
-import { AppWrapper, MainContent, HomeWrapper } from "./styled";
+import { Home } from "./Home";
+import { AppWrapper, MainContent } from "./styled";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
 
       <MainContent>
         <Routes>
-          <Route path="/" element={<HomeWrapper>Strona Główna</HomeWrapper>} />
+          <Route path="/" element={<Home />} />
           <Route path="/polityka-prywatnosci" element={<Privacy />} />
           <Route path="/regulamin" element={<Terms />} />
           <Route path="/privacy" element={<Navigate to="/polityka-prywatnosci" replace />} />
