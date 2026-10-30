@@ -5,7 +5,7 @@ import { ContactWrapper } from "./styled";
 export const Contact = () => {
   return (
     <ContactWrapper>
-      <Link to="/contact">Kontakt</Link>
+      <Link to="/kontakt">Kontakt</Link>
     </ContactWrapper>
   );
 };

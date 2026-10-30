@@ -5,7 +5,7 @@ import { AboutWrapper } from "./styled";
 export const About = () => {
   return (
     <AboutWrapper>
-      <Link to="/about">O nas</Link>
+      <Link to="/o-nas">O nas</Link>
     </AboutWrapper>
   );
 };

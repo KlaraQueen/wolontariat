@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { Navigation } from "./Navigation";
 import { Footer } from "./Footer";
 import { Privacy } from "./Privacy";
@@ -14,8 +14,10 @@ function App() {
       <MainContent>
         <Routes>
           <Route path="/" element={<HomeWrapper>Strona Główna</HomeWrapper>} />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/terms" element={<Terms />} />
+          <Route path="/polityka-prywatnosci" element={<Privacy />} />
+          <Route path="/regulamin" element={<Terms />} />
+          <Route path="/privacy" element={<Navigate to="/polityka-prywatnosci" replace />} />
+          <Route path="/terms" element={<Navigate to="/regulamin" replace />} />
         </Routes>
       </MainContent>
 

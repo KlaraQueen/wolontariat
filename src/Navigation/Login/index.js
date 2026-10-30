@@ -4,7 +4,7 @@ import { LoginItem, LoginButton } from "./styled";
 export const Login = () => {
   return (
     <LoginItem>
-      <LoginButton to="/login">Zaloguj się</LoginButton>
+      <LoginButton to="/logowanie">Zaloguj</LoginButton>
     </LoginItem>
   );
 };
