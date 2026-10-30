@@ -6,15 +6,15 @@ export const ContactWrapper = styled.li`
     align-items: center;
     padding: 0.7rem 1rem;
     border-radius: 999px;
-    color: rgba(255, 255, 255, 0.85);
+    color: ${({ theme }) => theme.colors.text};
     font-weight: 600;
     transition: all 0.2s ease;
   }
 
   a:hover {
-    background: rgba(242, 178, 103, 0.12);
-    color: ${({ theme }) => theme.colors.secondary};
+    background: rgba(91, 109, 255, 0.08);
+    color: ${({ theme }) => theme.colors.primary};
     transform: translateY(-1px);
-    box-shadow: 0 0 0 1px rgba(242, 178, 103, 0.18);
+    box-shadow: 0 0 0 1px rgba(91, 109, 255, 0.12);
   }
 `;

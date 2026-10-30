@@ -17,13 +17,13 @@ export const LoginButton = styled(Link)`
   color: ${({ theme }) => theme.colors.white};
   font-weight: 700;
   letter-spacing: 0.01em;
-  box-shadow: 0 12px 24px rgba(242, 178, 103, 0.18);
+  box-shadow: 0 12px 24px rgba(91, 109, 255, 0.22);
   transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 
   &:hover {
     transform: translateY(-2px);
     filter: brightness(1.06);
-    box-shadow: 0 18px 28px rgba(242, 178, 103, 0.2);
+    box-shadow: 0 18px 28px rgba(166, 108, 255, 0.18);
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {

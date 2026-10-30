@@ -9,11 +9,11 @@ export const NavigationWrapper = styled.nav`
   align-items: center;
   gap: 1.5rem;
   padding: 1rem 2.5rem;
-  background: rgba(26, 42, 37, 0.72);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 12px 28px rgba(17, 26, 27, 0.12), 0 0 0 1px rgba(242, 178, 103, 0.08);
-  border-bottom: 1px solid rgba(242, 178, 103, 0.1);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 12px 28px rgba(91, 109, 255, 0.08);
+  border-bottom: 1px solid rgba(91, 109, 255, 0.08);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     flex-wrap: wrap;
@@ -31,7 +31,7 @@ export const LogoBox = styled.div`
     display: inline-flex;
     align-items: center;
     gap: 0.2rem;
-    color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.primary};
     transition: transform 0.2s ease;
   }
 
@@ -41,7 +41,7 @@ export const LogoBox = styled.div`
 
   span {
     color: ${({ theme }) => theme.colors.secondary};
-    text-shadow: 0 0 14px rgba(242, 178, 103, 0.45);
+    text-shadow: 0 0 10px rgba(166, 108, 255, 0.2);
   }
 `;
 
@@ -49,11 +49,11 @@ export const MenuList = styled.ul`
   display: flex;
   align-items: center;
   gap: 0.55rem;
-  padding: 0.3rem;
+  padding: 0.35rem;
   border-radius: 999px;
-  background: rgba(29, 42, 38, 0.8);
-  border: 1px solid rgba(242, 178, 103, 0.14);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 8px 20px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(135deg, rgba(238, 243, 255, 0.95), rgba(253, 240, 250, 0.9));
+  border: 1px solid rgba(91, 109, 255, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 8px 18px rgba(91, 109, 255, 0.06);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     display: ${({ $isOpen }) => ($isOpen ? "flex" : "none")};
@@ -61,13 +61,13 @@ export const MenuList = styled.ul`
     flex-direction: column;
     align-items: stretch;
     justify-content: center;
-    gap: 0.4rem;
+    gap: 0.5rem;
     padding: 0.8rem;
     margin-top: 0.5rem;
     border-radius: 1rem;
-    background: linear-gradient(180deg, rgba(30, 37, 36, 0.96), rgba(19, 25, 24, 0.96));
-    border: 1px solid rgba(205, 170, 104, 0.16);
-    box-shadow: 0 18px 30px rgba(15, 23, 42, 0.2), 0 0 20px rgba(205, 170, 104, 0.08);
+    background: linear-gradient(180deg, rgba(233, 239, 255, 0.98), rgba(249, 236, 247, 0.98));
+    border: 1px solid rgba(91, 109, 255, 0.12);
+    box-shadow: 0 18px 30px rgba(91, 109, 255, 0.12);
     opacity: ${({ $isOpen }) => ($isOpen ? 1 : 0)};
     transform: ${({ $isOpen }) => ($isOpen ? "translateY(0)" : "translateY(-8px)")};
     transition: opacity 0.2s ease, transform 0.2s ease;
@@ -92,8 +92,8 @@ export const MobileMenuButton = styled.button`
   width: 3rem;
   height: 3rem;
   border-radius: 0.9rem;
-  background: linear-gradient(135deg, rgba(44, 107, 95, 0.95), rgba(242, 178, 103, 0.85));
-  box-shadow: 0 8px 18px rgba(242, 178, 103, 0.12), 0 0 18px rgba(242, 178, 103, 0.12);
+  background: linear-gradient(135deg, ${({ theme }) => theme.colors.primary}, ${({ theme }) => theme.colors.secondary});
+  box-shadow: 0 8px 18px rgba(91, 109, 255, 0.18);
   align-items: center;
   justify-content: center;
 

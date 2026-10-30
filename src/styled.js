@@ -1,6 +1,16 @@
 import styled from "styled-components";
 
-export const AppWrapper = styled.main`
+export const AppWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
-  background-color: ${({ theme }) => theme.colors.background};
+`;
+
+export const MainContent = styled.main`
+  flex: 1;
+`;
+
+export const HomeWrapper = styled.section`
+  padding: 40px;
+  text-align: center;
 `;
