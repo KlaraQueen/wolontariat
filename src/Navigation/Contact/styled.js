@@ -12,9 +12,9 @@ export const ContactWrapper = styled.li`
   }
 
   a:hover {
-    background: rgba(91, 109, 255, 0.08);
+    background: rgba(128, 82, 214, 0.09);
     color: ${({ theme }) => theme.colors.primary};
     transform: translateY(-1px);
-    box-shadow: 0 0 0 1px rgba(91, 109, 255, 0.12);
+    box-shadow: 0 0 0 1px rgba(128, 82, 214, 0.14);
   }
 `;

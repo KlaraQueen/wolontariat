@@ -5,6 +5,7 @@ import { Footer } from "./Footer";
 import { Privacy } from "./Privacy";
 import { Terms } from "./Terms";
 import { Home } from "./Home";
+import { FAQPage } from "./FAQ";
 import { AppWrapper, MainContent } from "./styled";
 
 function App() {
@@ -15,6 +16,10 @@ function App() {
       <MainContent>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route
+            path="/najczesciej-zadawane-pytania"
+            element={<FAQPage />}
+          />
           <Route path="/polityka-prywatnosci" element={<Privacy />} />
           <Route path="/regulamin" element={<Terms />} />
           <Route

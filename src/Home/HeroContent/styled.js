@@ -15,7 +15,7 @@ export const ContentWrapper = styled.div`
   gap: clamp(8px, 1vw, 12px);
   color: #ffffff;
   text-align: left;
-  text-shadow: 0 2px 14px rgba(8, 24, 38, 0.5);
+  text-shadow: 0 2px 14px rgba(42, 18, 55, 0.52);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     width: min(100%, 460px);
@@ -76,7 +76,7 @@ export const CTAButton = styled(Link)`
   display: inline-block;
   margin-top: 2px;
   padding: 10px 22px;
-  background: #f27b68;
+  background: linear-gradient(135deg, #8052d6, #d45aa6);
   color: #ffffff;
   font-size: 0.95rem;
   font-weight: 700;
@@ -86,12 +86,12 @@ export const CTAButton = styled(Link)`
     background-color 0.2s ease,
     transform 0.2s ease,
     box-shadow 0.2s ease;
-  box-shadow: 0 10px 28px rgba(242, 123, 104, 0.28);
+  box-shadow: 0 10px 28px rgba(128, 82, 214, 0.28);
 
   &:hover {
-    background: #e96855;
+    background: linear-gradient(135deg, #7040c8, #c94494);
     transform: translateY(-3px);
-    box-shadow: 0 14px 34px rgba(242, 123, 104, 0.38);
+    box-shadow: 0 14px 34px rgba(212, 90, 166, 0.34);
   }
 
   &:focus-visible {

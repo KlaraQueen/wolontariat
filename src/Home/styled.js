@@ -13,7 +13,7 @@ export const HeroSection = styled.section`
   padding: clamp(12px, 2vw, 24px) clamp(16px, 3vw, 42px);
   overflow: hidden;
   isolation: isolate;
-  background: #183b56;
+  background: #392348;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     aspect-ratio: auto;

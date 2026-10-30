@@ -12,8 +12,8 @@ export const NavigationWrapper = styled.nav`
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 12px 28px rgba(91, 109, 255, 0.08);
-  border-bottom: 1px solid rgba(91, 109, 255, 0.08);
+  box-shadow: 0 12px 28px rgba(128, 82, 214, 0.08);
+  border-bottom: 1px solid rgba(128, 82, 214, 0.1);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     flex-wrap: wrap;
@@ -41,7 +41,7 @@ export const LogoBox = styled.div`
 
   span {
     color: ${({ theme }) => theme.colors.secondary};
-    text-shadow: 0 0 10px rgba(166, 108, 255, 0.2);
+    text-shadow: 0 0 10px rgba(212, 90, 166, 0.2);
   }
 `;
 
@@ -53,13 +53,13 @@ export const MenuList = styled.ul`
   border-radius: 999px;
   background: linear-gradient(
     135deg,
-    rgba(238, 243, 255, 0.95),
-    rgba(253, 240, 250, 0.9)
+    rgba(243, 234, 254, 0.96),
+    rgba(255, 239, 248, 0.94)
   );
-  border: 1px solid rgba(91, 109, 255, 0.08);
+  border: 1px solid rgba(128, 82, 214, 0.1);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.7),
-    0 8px 18px rgba(91, 109, 255, 0.06);
+    0 8px 18px rgba(128, 82, 214, 0.07);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     display: ${({ $isOpen }) => ($isOpen ? "flex" : "none")};
@@ -73,11 +73,11 @@ export const MenuList = styled.ul`
     border-radius: 1rem;
     background: linear-gradient(
       180deg,
-      rgba(233, 239, 255, 0.98),
-      rgba(249, 236, 247, 0.98)
+      rgba(243, 234, 254, 0.99),
+      rgba(255, 239, 248, 0.99)
     );
-    border: 1px solid rgba(91, 109, 255, 0.12);
-    box-shadow: 0 18px 30px rgba(91, 109, 255, 0.12);
+    border: 1px solid rgba(128, 82, 214, 0.14);
+    box-shadow: 0 18px 30px rgba(128, 82, 214, 0.14);
     opacity: ${({ $isOpen }) => ($isOpen ? 1 : 0)};
     transform: ${({ $isOpen }) =>
       $isOpen ? "translateY(0)" : "translateY(-8px)"};
@@ -110,7 +110,7 @@ export const MobileMenuButton = styled.button`
     ${({ theme }) => theme.colors.primary},
     ${({ theme }) => theme.colors.secondary}
   );
-  box-shadow: 0 8px 18px rgba(91, 109, 255, 0.18);
+  box-shadow: 0 8px 18px rgba(128, 82, 214, 0.22);
   align-items: center;
   justify-content: center;
 

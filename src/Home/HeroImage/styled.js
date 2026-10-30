@@ -5,7 +5,7 @@ export const ImageWrapper = styled.div`
   z-index: 0;
   inset: 0;
   overflow: hidden;
-  background: #183b56;
+  background: #392348;
 `;
 
 export const StyledImage = styled.img`

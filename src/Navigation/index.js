@@ -9,7 +9,7 @@ import {
 } from "./styled";
 import { Start } from "./Start";
 import { About } from "./About";
-import { Contact } from "./Contact";
+import { FAQ } from "./FAQ";
 import { Login } from "./Login";
 
 export const Navigation = () => {
@@ -45,7 +45,7 @@ export const Navigation = () => {
       <MenuList $isOpen={isMenuOpen} onClick={handleMenuClick}>
         <Start />
         <About />
-        <Contact />
+        <FAQ />
         <Login />
       </MenuList>
     </NavigationWrapper>

@@ -12,10 +12,10 @@ export const FooterWrapper = styled.footer`
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.9),
-    rgba(240, 244, 255, 0.95)
+    rgba(243, 234, 254, 0.95)
   );
-  border-top: 1px solid rgba(91, 109, 255, 0.08);
-  box-shadow: 0 -8px 24px rgba(91, 109, 255, 0.04);
+  border-top: 1px solid rgba(128, 82, 214, 0.1);
+  box-shadow: 0 -8px 24px rgba(128, 82, 214, 0.05);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     gap: 0.75rem;

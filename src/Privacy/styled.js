@@ -36,12 +36,12 @@ export const PrivacyText = styled.p`
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.8),
-    rgba(233, 239, 255, 0.7)
+    rgba(243, 234, 254, 0.72)
   );
-  border: 1px solid rgba(91, 109, 255, 0.08);
+  border: 1px solid rgba(128, 82, 214, 0.1);
   border-radius: 24px;
   padding: 28px 30px;
-  box-shadow: 0 16px 34px rgba(91, 109, 255, 0.06);
+  box-shadow: 0 16px 34px rgba(128, 82, 214, 0.07);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     font-size: 0.96rem;
