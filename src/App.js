@@ -16,10 +16,7 @@ function App() {
       <MainContent>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route
-            path="/najczesciej-zadawane-pytania"
-            element={<FAQPage />}
-          />
+          <Route path="/najczesciej-zadawane-pytania" element={<FAQPage />} />
           <Route path="/polityka-prywatnosci" element={<Privacy />} />
           <Route path="/regulamin" element={<Terms />} />
           <Route

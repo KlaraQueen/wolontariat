@@ -20,7 +20,7 @@ const FAQAnswerContent = ({ answer }) => {
 
   return (
     <>
-      {answer.before} {" "}
+      {answer.before}{" "}
       <FAQContactLink href={`mailto:${contactData.email}`}>
         <Mail size={16} strokeWidth={2} aria-hidden="true" />
         {answer.emailLabel}
