@@ -7,7 +7,7 @@ export const HeroContent = () => {
     <ContentWrapper>
       <Title>{homeData.hero.title}</Title>
       <Description>{homeData.hero.description}</Description>
-      <CTAButton to="/login">{homeData.hero.buttonText}</CTAButton>
+      <CTAButton to="/o-nas">{homeData.hero.buttonText}</CTAButton>
     </ContentWrapper>
   );
 };

@@ -6,18 +6,22 @@ import { Privacy } from "./Privacy";
 import { Terms } from "./Terms";
 import { Home } from "./Home";
 import { FAQPage } from "./FAQ";
+import { About } from "./About";
 import { AppWrapper, MainContent } from "./styled";
 import { ScrollManager } from "./ScrollManager";
+import { DonationRibbon } from "./DonationRibbon";
 
 function App() {
   return (
     <AppWrapper>
       <ScrollManager />
       <Navigation />
+      <DonationRibbon />
 
       <MainContent>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/o-nas" element={<About />} />
           <Route path="/najczesciej-zadawane-pytania" element={<FAQPage />} />
           <Route path="/polityka-prywatnosci" element={<Privacy />} />
           <Route path="/regulamin" element={<Terms />} />

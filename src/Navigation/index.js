@@ -10,7 +10,6 @@ import {
 import { Start } from "./Start";
 import { About } from "./About";
 import { FAQ } from "./FAQ";
-import { Login } from "./Login";
 
 export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,7 +45,6 @@ export const Navigation = () => {
         <Start />
         <About />
         <FAQ />
-        <Login />
       </MenuList>
     </NavigationWrapper>
   );
