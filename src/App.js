@@ -7,10 +7,12 @@ import { Terms } from "./Terms";
 import { Home } from "./Home";
 import { FAQPage } from "./FAQ";
 import { AppWrapper, MainContent } from "./styled";
+import { ScrollManager } from "./ScrollManager";
 
 function App() {
   return (
     <AppWrapper>
+      <ScrollManager />
       <Navigation />
 
       <MainContent>
