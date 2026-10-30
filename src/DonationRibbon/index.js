@@ -32,7 +32,10 @@ export const DonationRibbon = () => {
     setIsExpanded((current) => {
       const nextState = !current;
       try {
-        window.localStorage.setItem("donation-ribbon-collapsed", String(!nextState));
+        window.localStorage.setItem(
+          "donation-ribbon-collapsed",
+          String(!nextState),
+        );
       } catch {
         // The banner remains usable when browser storage is unavailable.
       }
@@ -49,7 +52,9 @@ export const DonationRibbon = () => {
         title="Pomóż mi żyć — rozwiń pasek"
       >
         <CollapsedImage src={donationData.imageUrl} alt="" />
-        <CollapsedHeart><Heart size={16} fill="currentColor" aria-hidden="true" /></CollapsedHeart>
+        <CollapsedHeart>
+          <Heart size={16} fill="currentColor" aria-hidden="true" />
+        </CollapsedHeart>
       </CollapsedButton>
     );
   }

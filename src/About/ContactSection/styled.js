@@ -62,7 +62,9 @@ export const ContactLink = styled.a`
   font-size: 0.87rem;
   font-weight: 700;
   overflow-wrap: anywhere;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-2px);

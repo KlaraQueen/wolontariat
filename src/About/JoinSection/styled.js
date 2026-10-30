@@ -94,7 +94,9 @@ export const JoinLink = styled(Link)`
   background: #ffffff;
   color: #7546c1;
   font-weight: 750;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-2px);

@@ -1,6 +1,12 @@
 import React from "react";
 import { ArrowRight, HeartHandshake } from "lucide-react";
-import { JoinSectionWrapper, JoinIcon, JoinTitle, JoinDescription, JoinLink } from "./styled";
+import {
+  JoinSectionWrapper,
+  JoinIcon,
+  JoinTitle,
+  JoinDescription,
+  JoinLink,
+} from "./styled";
 
 export const JoinSection = () => (
   <JoinSectionWrapper>

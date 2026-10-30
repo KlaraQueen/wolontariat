@@ -67,7 +67,9 @@ export const MoreAboutLink = styled(Link)`
   color: ${({ theme }) => theme.colors.primary};
   font-weight: 700;
   box-shadow: 0 8px 20px rgba(128, 82, 214, 0.07);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-2px);

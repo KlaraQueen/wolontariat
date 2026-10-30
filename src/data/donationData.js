@@ -4,5 +4,6 @@ export const donationData = {
   description:
     "Każdy gest ma znaczenie. Skontaktuj się z nami, a prześlemy szczegóły zbiórki.",
   imageUrl: "/images/hero.jpg",
-  imageAlt: "Dziewczynka w otoczeniu wspierających ją wolontariuszy — zdjęcie przykładowe.",
+  imageAlt:
+    "Dziewczynka w otoczeniu wspierających ją wolontariuszy — zdjęcie przykładowe.",
 };

@@ -8,7 +8,9 @@ export const ValueCardWrapper = styled.article`
   border-radius: 24px;
   background: rgba(255, 255, 255, 0.88);
   box-shadow: 0 12px 30px rgba(72, 43, 102, 0.055);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-4px);
@@ -20,7 +22,9 @@ export const ValueCardWrapper = styled.article`
     top: 28px;
     right: 28px;
     color: #b7a3c7;
-    transition: color 0.2s ease, transform 0.2s ease;
+    transition:
+      color 0.2s ease,
+      transform 0.2s ease;
   }
 
   &:hover .corner-icon {

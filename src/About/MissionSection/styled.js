@@ -29,8 +29,16 @@ export const MissionVisual = styled.div`
   border: 1px solid rgba(128, 82, 214, 0.12);
   border-radius: 32px;
   background:
-    radial-gradient(circle at 75% 22%, rgba(255, 255, 255, 0.86) 0 7%, transparent 7.5%),
-    radial-gradient(circle at 18% 82%, rgba(255, 255, 255, 0.54) 0 12%, transparent 12.5%),
+    radial-gradient(
+      circle at 75% 22%,
+      rgba(255, 255, 255, 0.86) 0 7%,
+      transparent 7.5%
+    ),
+    radial-gradient(
+      circle at 18% 82%,
+      rgba(255, 255, 255, 0.54) 0 12%,
+      transparent 12.5%
+    ),
     linear-gradient(145deg, #eee4ff, #f8e5f3 60%, #ffece7);
 
   &::before,

@@ -38,14 +38,23 @@ export const AboutHero = () => (
       <ArtworkCircle />
       <MainIllustration>
         <HandHeart size={104} strokeWidth={1.35} aria-hidden="true" />
-        <Heart className="heart-accent" size={32} fill="currentColor" aria-hidden="true" />
+        <Heart
+          className="heart-accent"
+          size={32}
+          fill="currentColor"
+          aria-hidden="true"
+        />
       </MainIllustration>
       <FloatingNote className="note-top">
-        <span className="note-icon"><Heart size={17} aria-hidden="true" /></span>
+        <span className="note-icon">
+          <Heart size={17} aria-hidden="true" />
+        </span>
         <span>Pomoc ma znaczenie</span>
       </FloatingNote>
       <FloatingNote className="note-bottom">
-        <span className="note-icon"><Sparkles size={17} aria-hidden="true" /></span>
+        <span className="note-icon">
+          <Sparkles size={17} aria-hidden="true" />
+        </span>
         <span>Każdy może zacząć</span>
       </FloatingNote>
     </HeroArtwork>

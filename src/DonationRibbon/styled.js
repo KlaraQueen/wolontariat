@@ -88,12 +88,18 @@ export const CampaignLink = styled.a`
   max-width: 100%;
   padding: 7px 11px;
   border-radius: 999px;
-  background: linear-gradient(120deg, ${({ theme }) => theme.colors.primary}, ${({ theme }) => theme.colors.secondary});
+  background: linear-gradient(
+    120deg,
+    ${({ theme }) => theme.colors.primary},
+    ${({ theme }) => theme.colors.secondary}
+  );
   color: #ffffff;
   font-size: 0.74rem;
   font-weight: 750;
   text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-1px);
@@ -115,7 +121,9 @@ export const ToggleButton = styled.button`
   border-radius: 50%;
   background: #f3eafe;
   color: #7546c1;
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 
   &:hover {
     transform: translateY(-1px);

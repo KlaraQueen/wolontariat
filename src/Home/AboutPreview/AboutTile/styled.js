@@ -11,7 +11,9 @@ export const Tile = styled.article`
   color: inherit;
   box-shadow: 0 9px 24px rgba(72, 43, 102, 0.045);
   text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-3px);

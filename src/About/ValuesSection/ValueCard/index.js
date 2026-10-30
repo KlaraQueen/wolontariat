@@ -1,6 +1,11 @@
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
-import { ValueCardWrapper, ValueIcon, ValueTitle, ValueDescription } from "./styled";
+import {
+  ValueCardWrapper,
+  ValueIcon,
+  ValueTitle,
+  ValueDescription,
+} from "./styled";
 
 export const ValueCard = ({ value, Icon }) => (
   <ValueCardWrapper>

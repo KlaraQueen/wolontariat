@@ -92,11 +92,17 @@ export const PrimaryLink = styled(Link)`
   min-height: 52px;
   padding: 0 22px;
   border-radius: 999px;
-  background: linear-gradient(120deg, ${({ theme }) => theme.colors.primary}, ${({ theme }) => theme.colors.secondary});
+  background: linear-gradient(
+    120deg,
+    ${({ theme }) => theme.colors.primary},
+    ${({ theme }) => theme.colors.secondary}
+  );
   color: #ffffff;
   font-weight: 700;
   box-shadow: 0 12px 26px rgba(128, 82, 214, 0.22);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-2px);
@@ -145,7 +151,12 @@ export const ArtworkCircle = styled.div`
   aspect-ratio: 1;
   border: 1px solid rgba(128, 82, 214, 0.12);
   border-radius: 50%;
-  background: radial-gradient(circle at 36% 30%, #ffffff 0, #f7eaff 58%, #f5dced 100%);
+  background: radial-gradient(
+    circle at 36% 30%,
+    #ffffff 0,
+    #f7eaff 58%,
+    #f5dced 100%
+  );
   box-shadow: 0 28px 70px rgba(103, 61, 147, 0.12);
 
   &::before,

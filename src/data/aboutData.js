@@ -107,8 +107,7 @@ export const aboutData = {
       name: "Ania",
       city: "Toruń",
       since: "1 rok wolontariatu",
-      quote:
-        "Cieszę się, że mogę zamienić dobre chęci w konkretne działanie.",
+      quote: "Cieszę się, że mogę zamienić dobre chęci w konkretne działanie.",
     },
     {
       id: 10,

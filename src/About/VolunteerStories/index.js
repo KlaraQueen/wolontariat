@@ -14,14 +14,22 @@ import {
 export const VolunteerStories = () => (
   <StoriesSection aria-labelledby="volunteer-stories-title">
     <StoriesHeading>
-      <StoriesTitle id="volunteer-stories-title">Nasi wolontariusze</StoriesTitle>
+      <StoriesTitle id="volunteer-stories-title">
+        Nasi wolontariusze
+      </StoriesTitle>
       <StoriesIntro>
-        Za każdą pomocą stoi człowiek. Poznaj przykładowe głosy naszej społeczności.
+        Za każdą pomocą stoi człowiek. Poznaj przykładowe głosy naszej
+        społeczności.
       </StoriesIntro>
     </StoriesHeading>
     <StoriesGrid>
       {aboutData.volunteerStories.map((story) => (
-        <VolunteerCard key={story.id} story={story} MapPinIcon={MapPin} SparklesIcon={Sparkles} />
+        <VolunteerCard
+          key={story.id}
+          story={story}
+          MapPinIcon={MapPin}
+          SparklesIcon={Sparkles}
+        />
       ))}
     </StoriesGrid>
     <StoriesDisclosure>{aboutData.storiesNote}</StoriesDisclosure>
