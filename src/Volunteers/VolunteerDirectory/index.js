@@ -28,7 +28,10 @@ export const VolunteerDirectory = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const cities = useMemo(
-    () => [...new Set(volunteersData.map((volunteer) => volunteer.city))].sort((a, b) => a.localeCompare(b, "pl")),
+    () =>
+      [...new Set(volunteersData.map((volunteer) => volunteer.city))].sort(
+        (a, b) => a.localeCompare(b, "pl"),
+      ),
     [],
   );
 
@@ -47,7 +50,10 @@ export const VolunteerDirectory = () => {
     });
   }, [city, search]);
 
-  const pageCount = Math.max(1, Math.ceil(filteredVolunteers.length / profilesPerPage));
+  const pageCount = Math.max(
+    1,
+    Math.ceil(filteredVolunteers.length / profilesPerPage),
+  );
   const visibleVolunteers = filteredVolunteers.slice(
     (currentPage - 1) * profilesPerPage,
     currentPage * profilesPerPage,
@@ -96,7 +102,9 @@ export const VolunteerDirectory = () => {
         >
           <option value="all">Wszystkie miasta</option>
           {cities.map((cityName) => (
-            <option key={cityName} value={cityName}>{cityName}</option>
+            <option key={cityName} value={cityName}>
+              {cityName}
+            </option>
           ))}
         </CityFilter>
       </DirectoryControls>
@@ -134,7 +142,9 @@ export const VolunteerDirectory = () => {
           </PageIndicator>
           <PageButton
             type="button"
-            onClick={() => setCurrentPage((page) => Math.min(pageCount, page + 1))}
+            onClick={() =>
+              setCurrentPage((page) => Math.min(pageCount, page + 1))
+            }
             disabled={currentPage === pageCount}
             aria-label="Następna strona"
           >

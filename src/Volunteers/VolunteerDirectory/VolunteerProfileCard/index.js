@@ -13,7 +13,9 @@ import {
 
 export const VolunteerProfileCard = ({ volunteer }) => (
   <ProfileCard>
-    <ProfileAvatar aria-hidden="true">{volunteer.name.slice(0, 1)}</ProfileAvatar>
+    <ProfileAvatar aria-hidden="true">
+      {volunteer.name.slice(0, 1)}
+    </ProfileAvatar>
     <ProfileName>{volunteer.name}</ProfileName>
     <ProfileCity>
       <MapPinIcon aria-hidden="true" />

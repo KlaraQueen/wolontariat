@@ -13,7 +13,9 @@ import {
 export const Volunteers = () => (
   <VolunteersPage>
     <PageIntro>
-      <IntroIcon aria-hidden="true"><UsersRound /></IntroIcon>
+      <IntroIcon aria-hidden="true">
+        <UsersRound />
+      </IntroIcon>
       <PageEyebrow>Nasza społeczność</PageEyebrow>
       <PageTitle>Poznaj naszych wolontariuszy</PageTitle>
       <PageDescription>

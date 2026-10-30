@@ -32,7 +32,9 @@ export const SearchField = styled.label`
   border-radius: 16px;
   background: ${({ theme }) => theme.colors.surfaceWhite};
   box-shadow: ${({ theme }) => theme.colors.volunteerControlShadow};
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 
   &:focus-within {
     border-color: ${({ theme }) => theme.colors.primary};
