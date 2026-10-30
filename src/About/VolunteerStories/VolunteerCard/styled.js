@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { MapPin, Quote, Sparkles } from "lucide-react";
 
 export const StoryCard = styled.article`
   position: relative;
@@ -12,17 +13,31 @@ export const StoryCard = styled.article`
   background: linear-gradient(145deg, #ffffff 15%, #fff8fc 100%);
   box-shadow: 0 10px 28px rgba(72, 43, 102, 0.05);
 
-  .quote-mark {
-    position: absolute;
-    top: 21px;
-    right: 22px;
-    color: #d7c6ed;
-  }
-
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     min-height: 0;
     padding: 21px;
   }
+`;
+
+export const QuoteIcon = styled(Quote)`
+  position: absolute;
+  top: 21px;
+  right: 22px;
+  width: 22px;
+  height: 22px;
+  color: #d7c6ed;
+`;
+
+export const LocationIcon = styled(MapPin)`
+  width: 14px;
+  height: 14px;
+  flex: none;
+`;
+
+export const TenureIcon = styled(Sparkles)`
+  width: 14px;
+  height: 14px;
+  flex: none;
 `;
 
 export const StoryMeta = styled.div`

@@ -49,10 +49,3 @@ export const StoriesGrid = styled.div`
   }
 `;
 
-export const StoriesDisclosure = styled.p`
-  margin: 18px 0 0;
-  color: ${({ theme }) => theme.colors.muted};
-  font-size: 0.82rem;
-  line-height: 1.6;
-  text-align: center;
-`;

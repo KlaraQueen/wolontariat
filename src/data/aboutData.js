@@ -150,6 +150,4 @@ export const aboutData = {
         "Dzięki wolontariatowi poznałem ludzi, którzy inspirują mnie do kolejnych dobrych kroków.",
     },
   ],
-  storiesNote:
-    "Przykładowe profile i wypowiedzi — docelowo zastąpimy je prawdziwymi historiami wolontariuszy.",
 };

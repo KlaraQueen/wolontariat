@@ -1,5 +1,4 @@
 import React from "react";
-import { MapPin, Sparkles } from "lucide-react";
 import { aboutData } from "../../data/aboutData";
 import { VolunteerCard } from "./VolunteerCard";
 import {
@@ -8,7 +7,6 @@ import {
   StoriesTitle,
   StoriesIntro,
   StoriesGrid,
-  StoriesDisclosure,
 } from "./styled";
 
 export const VolunteerStories = () => (
@@ -18,20 +16,13 @@ export const VolunteerStories = () => (
         Nasi wolontariusze
       </StoriesTitle>
       <StoriesIntro>
-        Za każdą pomocą stoi człowiek. Poznaj przykładowe głosy naszej
-        społeczności.
+        Za każdą pomocą stoi człowiek. Poznaj głosy naszej społeczności.
       </StoriesIntro>
     </StoriesHeading>
     <StoriesGrid>
       {aboutData.volunteerStories.map((story) => (
-        <VolunteerCard
-          key={story.id}
-          story={story}
-          MapPinIcon={MapPin}
-          SparklesIcon={Sparkles}
-        />
+        <VolunteerCard key={story.id} story={story} />
       ))}
     </StoriesGrid>
-    <StoriesDisclosure>{aboutData.storiesNote}</StoriesDisclosure>
   </StoriesSection>
 );
