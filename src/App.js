@@ -17,7 +17,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/polityka-prywatnosci" element={<Privacy />} />
           <Route path="/regulamin" element={<Terms />} />
-          <Route path="/privacy" element={<Navigate to="/polityka-prywatnosci" replace />} />
+          <Route
+            path="/privacy"
+            element={<Navigate to="/polityka-prywatnosci" replace />}
+          />
           <Route path="/terms" element={<Navigate to="/regulamin" replace />} />
         </Routes>
       </MainContent>
