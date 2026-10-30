@@ -33,7 +33,11 @@ export const PrivacyText = styled.p`
   color: ${({ theme }) => theme.colors.text};
   white-space: pre-line;
   text-align: left;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(233, 239, 255, 0.7));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.8),
+    rgba(233, 239, 255, 0.7)
+  );
   border: 1px solid rgba(91, 109, 255, 0.08);
   border-radius: 24px;
   padding: 28px 30px;

@@ -9,7 +9,11 @@ export const FooterWrapper = styled.footer`
   width: 100%;
   margin-top: auto;
   padding: 1.5rem 2.5rem 1rem;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(240, 244, 255, 0.95));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(240, 244, 255, 0.95)
+  );
   border-top: 1px solid rgba(91, 109, 255, 0.08);
   box-shadow: 0 -8px 24px rgba(91, 109, 255, 0.04);
 

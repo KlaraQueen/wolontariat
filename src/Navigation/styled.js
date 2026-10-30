@@ -51,9 +51,15 @@ export const MenuList = styled.ul`
   gap: 0.55rem;
   padding: 0.35rem;
   border-radius: 999px;
-  background: linear-gradient(135deg, rgba(238, 243, 255, 0.95), rgba(253, 240, 250, 0.9));
+  background: linear-gradient(
+    135deg,
+    rgba(238, 243, 255, 0.95),
+    rgba(253, 240, 250, 0.9)
+  );
   border: 1px solid rgba(91, 109, 255, 0.08);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 8px 18px rgba(91, 109, 255, 0.06);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    0 8px 18px rgba(91, 109, 255, 0.06);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     display: ${({ $isOpen }) => ($isOpen ? "flex" : "none")};
@@ -65,12 +71,19 @@ export const MenuList = styled.ul`
     padding: 0.8rem;
     margin-top: 0.5rem;
     border-radius: 1rem;
-    background: linear-gradient(180deg, rgba(233, 239, 255, 0.98), rgba(249, 236, 247, 0.98));
+    background: linear-gradient(
+      180deg,
+      rgba(233, 239, 255, 0.98),
+      rgba(249, 236, 247, 0.98)
+    );
     border: 1px solid rgba(91, 109, 255, 0.12);
     box-shadow: 0 18px 30px rgba(91, 109, 255, 0.12);
     opacity: ${({ $isOpen }) => ($isOpen ? 1 : 0)};
-    transform: ${({ $isOpen }) => ($isOpen ? "translateY(0)" : "translateY(-8px)")};
-    transition: opacity 0.2s ease, transform 0.2s ease;
+    transform: ${({ $isOpen }) =>
+      $isOpen ? "translateY(0)" : "translateY(-8px)"};
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease;
 
     li {
       display: flex;
@@ -92,7 +105,11 @@ export const MobileMenuButton = styled.button`
   width: 3rem;
   height: 3rem;
   border-radius: 0.9rem;
-  background: linear-gradient(135deg, ${({ theme }) => theme.colors.primary}, ${({ theme }) => theme.colors.secondary});
+  background: linear-gradient(
+    135deg,
+    ${({ theme }) => theme.colors.primary},
+    ${({ theme }) => theme.colors.secondary}
+  );
   box-shadow: 0 8px 18px rgba(91, 109, 255, 0.18);
   align-items: center;
   justify-content: center;
@@ -143,4 +160,4 @@ export const MenuIcon = styled.span`
         transform: translateY(-0.38rem) rotate(-45deg);
       }
     `}
-`; 
+`;

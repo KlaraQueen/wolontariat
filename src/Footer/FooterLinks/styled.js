@@ -21,7 +21,9 @@ export const LinkItem = styled.li`
 export const StyledLink = styled(Link)`
   color: ${({ theme }) => theme.colors.text};
   font-weight: 600;
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
 
   &:hover {
     color: ${({ theme }) => theme.colors.primary};
