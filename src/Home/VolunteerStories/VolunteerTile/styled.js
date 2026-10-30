@@ -8,16 +8,19 @@ export const Tile = styled.article`
   min-height: 100%;
   flex-direction: column;
   padding: clamp(18px, 2.2vw, 24px);
-  border: 1px solid rgba(128, 82, 214, 0.12);
+  border: 1px solid ${({ theme }) => theme.colors.volunteerBorder};
   border-radius: 22px;
-  background: linear-gradient(145deg, #ffffff 15%, #fff8fc 100%);
-  box-shadow: 0 10px 28px rgba(72, 43, 102, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  background: ${({ theme }) => theme.colors.volunteerCardGradient};
+  box-shadow: ${({ theme }) => theme.colors.volunteerCardShadow};
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
 
   &:hover {
     transform: translateY(-3px);
-    border-color: rgba(212, 90, 166, 0.25);
-    box-shadow: 0 16px 34px rgba(128, 82, 214, 0.1);
+    border-color: ${({ theme }) => theme.colors.volunteerBorderHover};
+    box-shadow: ${({ theme }) => theme.colors.volunteerCardShadowHover};
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
@@ -30,7 +33,6 @@ export const TileTop = styled.div`
   min-width: 0;
   align-items: center;
   gap: 12px;
-
 `;
 
 export const QuoteIcon = styled(Quote)`
@@ -38,7 +40,7 @@ export const QuoteIcon = styled(Quote)`
   height: 22px;
   margin-left: auto;
   flex: none;
-  color: #d7c6ed;
+  color: ${({ theme }) => theme.colors.quoteMark};
 `;
 
 export const LocationIcon = styled(MapPin)`
@@ -59,9 +61,9 @@ export const PersonInitial = styled.span`
   height: 46px;
   flex: none;
   place-items: center;
-  border: 1px solid rgba(128, 82, 214, 0.14);
+  border: 1px solid ${({ theme }) => theme.colors.volunteerBorder};
   border-radius: 15px;
-  background: linear-gradient(145deg, #f3eafe, #fcebf5);
+  background: ${({ theme }) => theme.colors.volunteerAvatarGradient};
   color: ${({ theme }) => theme.colors.primary};
   font-family: ${({ theme }) => theme.fonts.heading};
   font-size: 1.15rem;
@@ -92,7 +94,7 @@ export const PersonCity = styled.span`
 
 export const QuoteText = styled.p`
   margin: 17px 0 19px;
-  color: #554660;
+  color: ${({ theme }) => theme.colors.volunteerInk};
   font-size: 0.91rem;
   line-height: 1.65;
 `;
@@ -104,10 +106,10 @@ export const TileTenure = styled.span`
   gap: 6px;
   margin-top: auto;
   padding: 6px 9px;
-  border: 1px solid rgba(212, 90, 166, 0.14);
+  border: 1px solid ${({ theme }) => theme.colors.volunteerBadgeBorder};
   border-radius: 999px;
-  background: #fff0f8;
-  color: #a1488b;
+  background: ${({ theme }) => theme.colors.palePink};
+  color: ${({ theme }) => theme.colors.rose};
   font-size: 0.74rem;
   font-weight: 700;
 `;

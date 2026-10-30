@@ -8,10 +8,10 @@ export const StoryCard = styled.article`
   min-height: 250px;
   flex-direction: column;
   padding: 24px;
-  border: 1px solid rgba(128, 82, 214, 0.12);
+  border: 1px solid ${({ theme }) => theme.colors.volunteerBorder};
   border-radius: 22px;
-  background: linear-gradient(145deg, #ffffff 15%, #fff8fc 100%);
-  box-shadow: 0 10px 28px rgba(72, 43, 102, 0.05);
+  background: ${({ theme }) => theme.colors.volunteerCardGradient};
+  box-shadow: ${({ theme }) => theme.colors.volunteerCardShadow};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     min-height: 0;
@@ -25,7 +25,7 @@ export const QuoteIcon = styled(Quote)`
   right: 22px;
   width: 22px;
   height: 22px;
-  color: #d7c6ed;
+  color: ${({ theme }) => theme.colors.quoteMark};
 `;
 
 export const LocationIcon = styled(MapPin)`
@@ -66,7 +66,7 @@ export const StoryLocation = styled.span`
 
 export const StoryQuote = styled.p`
   margin: 20px 0 24px;
-  color: #554660;
+  color: ${({ theme }) => theme.colors.volunteerInk};
   font-size: 0.97rem;
   line-height: 1.75;
 `;
@@ -78,10 +78,10 @@ export const StoryTenure = styled.span`
   width: fit-content;
   margin-top: auto;
   padding: 7px 10px;
-  border: 1px solid rgba(212, 90, 166, 0.14);
+  border: 1px solid ${({ theme }) => theme.colors.volunteerBadgeBorder};
   border-radius: 999px;
-  background: #fff0f8;
-  color: #a1488b;
+  background: ${({ theme }) => theme.colors.palePink};
+  color: ${({ theme }) => theme.colors.rose};
   font-size: 0.78rem;
   font-weight: 700;
 `;

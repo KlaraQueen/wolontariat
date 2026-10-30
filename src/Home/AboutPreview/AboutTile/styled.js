@@ -5,11 +5,11 @@ export const Tile = styled.article`
   display: block;
   min-width: 0;
   padding: 23px;
-  border: 1px solid rgba(128, 82, 214, 0.11);
+  border: 1px solid ${({ theme }) => theme.colors.volunteerBorder};
   border-radius: 20px;
-  background: linear-gradient(145deg, #ffffff, #fffaff);
+  background: ${({ theme }) => theme.colors.volunteerCardGradient};
   color: inherit;
-  box-shadow: 0 9px 24px rgba(72, 43, 102, 0.045);
+  box-shadow: ${({ theme }) => theme.colors.volunteerCardShadow};
   text-decoration: none;
   transition:
     transform 0.2s ease,
@@ -17,14 +17,14 @@ export const Tile = styled.article`
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 32px rgba(128, 82, 214, 0.11);
+    box-shadow: ${({ theme }) => theme.colors.volunteerCardShadowHover};
   }
 
   .tile-arrow {
     position: absolute;
     top: 24px;
     right: 23px;
-    color: #b7a3c7;
+    color: ${({ theme }) => theme.colors.quoteMark};
   }
 `;
 
@@ -34,9 +34,9 @@ export const TileIcon = styled.span`
   height: 44px;
   margin-bottom: 17px;
   place-items: center;
-  border: 1px solid rgba(128, 82, 214, 0.12);
+  border: 1px solid ${({ theme }) => theme.colors.volunteerBorder};
   border-radius: 14px;
-  background: linear-gradient(145deg, #f3eafe, #fcebf5);
+  background: ${({ theme }) => theme.colors.volunteerAvatarGradient};
   color: ${({ theme }) => theme.colors.primary};
 `;
 

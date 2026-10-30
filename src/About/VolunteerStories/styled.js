@@ -18,7 +18,7 @@ export const StoriesHeading = styled.header`
 
 export const StoriesTitle = styled.h2`
   margin: 0 0 12px;
-  background: linear-gradient(110deg, #8052d6, #d45aa6);
+  background: ${({ theme }) => theme.colors.primaryGradient};
   background-clip: text;
   color: transparent;
   font-family: ${({ theme }) => theme.fonts.heading};
@@ -49,3 +49,23 @@ export const StoriesGrid = styled.div`
   }
 `;
 
+export const StoriesLink = styled.a`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 24px auto 0;
+  padding: 11px 18px;
+  border: 1px solid ${({ theme }) => theme.colors.volunteerBorderStrong};
+  border-radius: 999px;
+  background: ${({ theme }) => theme.colors.surfaceWhite};
+  color: ${({ theme }) => theme.colors.primary};
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: ${({ theme }) => theme.colors.volunteerCardShadowHover};
+  }
+`;

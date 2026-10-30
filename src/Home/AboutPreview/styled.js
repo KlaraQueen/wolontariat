@@ -61,18 +61,18 @@ export const MoreAboutLink = styled(Link)`
   gap: 9px;
   margin-top: 24px;
   padding: 12px 20px;
-  border: 1px solid rgba(128, 82, 214, 0.2);
+  border: 1px solid ${({ theme }) => theme.colors.volunteerBorderStrong};
   border-radius: 999px;
-  background: #ffffff;
+  background: ${({ theme }) => theme.colors.surfaceWhite};
   color: ${({ theme }) => theme.colors.primary};
   font-weight: 700;
-  box-shadow: 0 8px 20px rgba(128, 82, 214, 0.07);
+  box-shadow: ${({ theme }) => theme.colors.volunteerControlShadow};
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 26px rgba(128, 82, 214, 0.14);
+    box-shadow: ${({ theme }) => theme.colors.volunteerCardShadowHover};
   }
 `;

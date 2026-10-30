@@ -28,7 +28,7 @@ export const StoriesEyebrow = styled.p`
 
 export const StoriesTitle = styled.h2`
   margin: 0 0 11px;
-  background: linear-gradient(110deg, #8052d6, #d45aa6);
+  background: ${({ theme }) => theme.colors.primaryGradient};
   background-clip: text;
   color: transparent;
   font-family: ${({ theme }) => theme.fonts.heading};
@@ -79,18 +79,20 @@ export const StoriesLink = styled.a`
   justify-content: center;
   gap: 8px;
   padding: 11px 16px;
-  border: 1px solid rgba(128, 82, 214, 0.2);
+  border: 1px solid ${({ theme }) => theme.colors.volunteerBorderStrong};
   border-radius: 999px;
-  background: #ffffff;
+  background: ${({ theme }) => theme.colors.surfaceWhite};
   color: ${({ theme }) => theme.colors.primary};
   font-size: 0.88rem;
   font-weight: 700;
   text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 24px rgba(128, 82, 214, 0.12);
+    box-shadow: ${({ theme }) => theme.colors.volunteerCardShadowHover};
   }
 `;
 

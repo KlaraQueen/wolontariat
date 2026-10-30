@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { aboutData } from "../../data/aboutData";
+import { volunteerStoriesData } from "../../data/volunteerStoriesData";
 import { VolunteerTile } from "./VolunteerTile";
 import {
   StoriesSection,
@@ -14,7 +14,7 @@ import {
   StoriesArrow,
 } from "./styled";
 
-const featuredStories = aboutData.volunteerStories.slice(0, 3);
+const featuredStories = volunteerStoriesData.slice(0, 3);
 
 export const VolunteerStories = () => (
   <StoriesSection aria-labelledby="home-volunteer-stories-title">
@@ -23,9 +23,10 @@ export const VolunteerStories = () => (
       <StoriesTitle id="home-volunteer-stories-title">
         Poznaj naszych wolontariuszy
       </StoriesTitle>
+      b
       <StoriesIntro>
-        Różne miasta, historie i codzienność — łączy nas chęć bycia obok drugiego
-        człowieka.
+        Różne miasta, historie i codzienność — łączy nas chęć bycia obok
+        drugiego człowieka.
       </StoriesIntro>
     </StoriesHeader>
 
@@ -36,8 +37,8 @@ export const VolunteerStories = () => (
     </StoriesGrid>
 
     <StoriesFooter>
-      <StoriesLink as={Link} to="/o-nas">
-        Poznaj całą naszą społeczność
+      <StoriesLink as={Link} to="/wolontariusze">
+        Poznaj wszystkich wolontariuszy
         <StoriesArrow aria-hidden="true" />
       </StoriesLink>
     </StoriesFooter>

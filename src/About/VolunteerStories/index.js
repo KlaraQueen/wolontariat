@@ -1,5 +1,6 @@
 import React from "react";
-import { aboutData } from "../../data/aboutData";
+import { Link } from "react-router-dom";
+import { volunteerStoriesData } from "../../data/volunteerStoriesData";
 import { VolunteerCard } from "./VolunteerCard";
 import {
   StoriesSection,
@@ -7,6 +8,7 @@ import {
   StoriesTitle,
   StoriesIntro,
   StoriesGrid,
+  StoriesLink,
 } from "./styled";
 
 export const VolunteerStories = () => (
@@ -20,9 +22,12 @@ export const VolunteerStories = () => (
       </StoriesIntro>
     </StoriesHeading>
     <StoriesGrid>
-      {aboutData.volunteerStories.map((story) => (
+      {volunteerStoriesData.slice(0, 3).map((story) => (
         <VolunteerCard key={story.id} story={story} />
       ))}
     </StoriesGrid>
+    <StoriesLink as={Link} to="/wolontariusze">
+      Zobacz wszystkich wolontariuszy
+    </StoriesLink>
   </StoriesSection>
 );
