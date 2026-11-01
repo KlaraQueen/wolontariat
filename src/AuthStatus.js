@@ -13,7 +13,8 @@ import {
 } from "./AuthStatus/styled";
 
 export const AuthStatus = () => {
-  const { isAuthenticated, user, loginWithRedirect, logout, isLoading } = useAuth0();
+  const { isAuthenticated, user, loginWithRedirect, logout, isLoading } =
+    useAuth0();
 
   return (
     <AuthStatusWrapper>
@@ -23,7 +24,9 @@ export const AuthStatus = () => {
             <UserName title={user?.name || "Użytkownik"}>
               {user?.name || "Użytkownik"}
             </UserName>
-            {user?.email && <UserEmail title={user.email}>{user.email}</UserEmail>}
+            {user?.email && (
+              <UserEmail title={user.email}>{user.email}</UserEmail>
+            )}
           </UserIdentity>
           <LogoutButton
             type="button"
