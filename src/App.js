@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 import { Navigation } from "./Navigation";
 import { Footer } from "./Footer";
 import { Privacy } from "./Privacy";
@@ -13,6 +14,11 @@ import { ScrollManager } from "./ScrollManager";
 import { DonationRibbon } from "./DonationRibbon";
 
 function App() {
+  const { isLoading, error } = useAuth0();
+
+  if (isLoading) return <div>Ładowanie...</div>;
+  if (error) return <div>Wystąpił błąd: {error.message}</div>;
+
   return (
     <AppWrapper>
       <ScrollManager />
