@@ -55,7 +55,10 @@ export const DashboardNavigation = () => {
         </NavItem>
 
         <NavItem>
-          <StyledNavLink to="/user/dashboard/moj-wolontariat" onClick={closeMenu}>
+          <StyledNavLink
+            to="/user/dashboard/moj-wolontariat"
+            onClick={closeMenu}
+          >
             Mój wolontariat
           </StyledNavLink>
         </NavItem>

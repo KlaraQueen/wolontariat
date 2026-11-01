@@ -49,38 +49,45 @@ export const MenuList = styled.ul`
   display: flex;
   align-items: center;
   gap: 0.55rem;
-  padding: 0.35rem;
+  padding: ${({ $isAuthenticated }) => ($isAuthenticated ? "0" : "0.35rem")};
   border-radius: 999px;
-  background: linear-gradient(
-    135deg,
-    rgba(243, 234, 254, 0.96),
-    rgba(255, 239, 248, 0.94)
-  );
-  border: 1px solid rgba(128, 82, 214, 0.1);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.7),
-    0 8px 18px rgba(128, 82, 214, 0.07);
+  background: ${({ $isAuthenticated }) =>
+    $isAuthenticated
+      ? "transparent"
+      : "linear-gradient(135deg, rgba(243, 234, 254, 0.96), rgba(255, 239, 248, 0.94))"};
+  border: ${({ $isAuthenticated }) =>
+    $isAuthenticated ? "0" : "1px solid rgba(128, 82, 214, 0.1)"};
+  box-shadow: ${({ $isAuthenticated }) =>
+    $isAuthenticated
+      ? "none"
+      : "inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 8px 18px rgba(128, 82, 214, 0.07)"};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    display: ${({ $isOpen }) => ($isOpen ? "flex" : "none")};
-    width: 100%;
-    flex-direction: column;
-    align-items: stretch;
+    display: ${({ $isAuthenticated, $isOpen }) =>
+      $isAuthenticated || $isOpen ? "flex" : "none"};
+    width: ${({ $isAuthenticated }) => ($isAuthenticated ? "auto" : "100%")};
+    flex-direction: ${({ $isAuthenticated }) =>
+      $isAuthenticated ? "row" : "column"};
+    align-items: ${({ $isAuthenticated }) =>
+      $isAuthenticated ? "center" : "stretch"};
     justify-content: center;
     gap: 0.5rem;
-    padding: 0.8rem;
-    margin-top: 0.5rem;
-    border-radius: 1rem;
-    background: linear-gradient(
-      180deg,
-      rgba(243, 234, 254, 0.99),
-      rgba(255, 239, 248, 0.99)
-    );
-    border: 1px solid rgba(128, 82, 214, 0.14);
-    box-shadow: 0 18px 30px rgba(128, 82, 214, 0.14);
-    opacity: ${({ $isOpen }) => ($isOpen ? 1 : 0)};
-    transform: ${({ $isOpen }) =>
-      $isOpen ? "translateY(0)" : "translateY(-8px)"};
+    padding: ${({ $isAuthenticated }) => ($isAuthenticated ? "0" : "0.8rem")};
+    margin-top: ${({ $isAuthenticated }) => ($isAuthenticated ? "0" : "0.5rem")};
+    border-radius: ${({ $isAuthenticated }) =>
+      $isAuthenticated ? "0" : "1rem"};
+    background: ${({ $isAuthenticated }) =>
+      $isAuthenticated
+        ? "transparent"
+        : "linear-gradient(180deg, rgba(243, 234, 254, 0.99), rgba(255, 239, 248, 0.99))"};
+    border: ${({ $isAuthenticated }) =>
+      $isAuthenticated ? "0" : "1px solid rgba(128, 82, 214, 0.14)"};
+    box-shadow: ${({ $isAuthenticated }) =>
+      $isAuthenticated ? "none" : "0 18px 30px rgba(128, 82, 214, 0.14)"};
+    opacity: ${({ $isAuthenticated, $isOpen }) =>
+      $isAuthenticated || $isOpen ? 1 : 0};
+    transform: ${({ $isAuthenticated, $isOpen }) =>
+      $isAuthenticated || $isOpen ? "translateY(0)" : "translateY(-8px)"};
     transition:
       opacity 0.2s ease,
       transform 0.2s ease;
@@ -89,13 +96,25 @@ export const MenuList = styled.ul`
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 100%;
+      width: ${({ $isAuthenticated }) =>
+        $isAuthenticated ? "auto" : "100%"};
     }
 
     a {
-      width: 100%;
+      width: ${({ $isAuthenticated }) =>
+        $isAuthenticated ? "auto" : "100%"};
       justify-content: center;
       text-align: center;
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+      ${({ $isAuthenticated }) =>
+        $isAuthenticated &&
+        `
+          margin-left: auto;
+          flex-wrap: wrap;
+          justify-content: flex-end;
+        `}
     }
   }
 `;

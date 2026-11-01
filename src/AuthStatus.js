@@ -5,29 +5,24 @@ import {
   AuthButton,
   LoginIcon,
   UserStatus,
-  UserIdentity,
-  UserName,
-  UserEmail,
+  ProfileLink,
+  ProfileIcon,
   LogoutButton,
   LogoutIcon,
 } from "./AuthStatus/styled";
 
 export const AuthStatus = () => {
-  const { isAuthenticated, user, loginWithRedirect, logout, isLoading } =
+  const { isAuthenticated, loginWithRedirect, logout, isLoading } =
     useAuth0();
 
   return (
     <AuthStatusWrapper>
       {isAuthenticated ? (
         <UserStatus>
-          <UserIdentity>
-            <UserName title={user?.name || "Użytkownik"}>
-              {user?.name || "Użytkownik"}
-            </UserName>
-            {user?.email && (
-              <UserEmail title={user.email}>{user.email}</UserEmail>
-            )}
-          </UserIdentity>
+          <ProfileLink to="/user/dashboard">
+            <ProfileIcon aria-hidden="true" />
+            Profil
+          </ProfileLink>
           <LogoutButton
             type="button"
             onClick={() =>

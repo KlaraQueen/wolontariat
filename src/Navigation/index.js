@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 import {
   NavigationWrapper,
   LogoBox,
@@ -14,6 +15,7 @@ import { AuthStatus } from "../AuthStatus";
 
 export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { isAuthenticated } = useAuth0();
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
@@ -26,26 +28,36 @@ export const Navigation = () => {
   };
 
   return (
-    <NavigationWrapper>
+    <NavigationWrapper $isAuthenticated={isAuthenticated}>
       <LogoBox>
         <Link to="/">
           Wolontariat<span>App</span>
         </Link>
       </LogoBox>
 
-      <MobileMenuButton
-        type="button"
-        onClick={toggleMenu}
-        aria-label="Otwórz menu"
-        aria-expanded={isMenuOpen}
-      >
-        <MenuIcon $isOpen={isMenuOpen} />
-      </MobileMenuButton>
+      {!isAuthenticated && (
+        <MobileMenuButton
+          type="button"
+          onClick={toggleMenu}
+          aria-label="Otwórz menu"
+          aria-expanded={isMenuOpen}
+        >
+          <MenuIcon $isOpen={isMenuOpen} />
+        </MobileMenuButton>
+      )}
 
-      <MenuList $isOpen={isMenuOpen} onClick={handleMenuClick}>
-        <Start />
-        <About />
-        <FAQ />
+      <MenuList
+        $isOpen={isMenuOpen}
+        $isAuthenticated={isAuthenticated}
+        onClick={handleMenuClick}
+      >
+        {!isAuthenticated && (
+          <>
+            <Start />
+            <About />
+            <FAQ />
+          </>
+        )}
         <AuthStatus />
       </MenuList>
     </NavigationWrapper>

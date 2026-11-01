@@ -91,10 +91,7 @@ function App() {
             path="/dashboard"
             element={<Navigate to="/user/dashboard" replace />}
           />
-          <Route
-            path="/dashboard/*"
-            element={<LegacyDashboardRedirect />}
-          />
+          <Route path="/dashboard/*" element={<LegacyDashboardRedirect />} />
           <Route
             path="/privacy"
             element={<Navigate to="/polityka-prywatnosci" replace />}
