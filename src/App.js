@@ -12,9 +12,10 @@ import { Volunteers } from "./Volunteers";
 import { AppWrapper, MainContent } from "./styled";
 import { ScrollManager } from "./ScrollManager";
 import { DonationRibbon } from "./DonationRibbon";
+import { Dashboard } from "./User/Dashboard";
 
 function App() {
-  const { isLoading, error } = useAuth0();
+  const { isLoading, error, isAuthenticated } = useAuth0();
 
   if (isLoading) return <div>Ładowanie...</div>;
   if (error) return <div>Wystąpił błąd: {error.message}</div>;
@@ -33,6 +34,16 @@ function App() {
           <Route path="/najczesciej-zadawane-pytania" element={<FAQPage />} />
           <Route path="/polityka-prywatnosci" element={<Privacy />} />
           <Route path="/regulamin" element={<Terms />} />
+          <Route
+            path="/user/dashboard"
+            element={
+              isAuthenticated ? <Dashboard /> : <Navigate to="/" replace />
+            }
+          />
+          <Route
+            path="/dashboard"
+            element={<Navigate to="/user/dashboard" replace />}
+          />
           <Route
             path="/privacy"
             element={<Navigate to="/polityka-prywatnosci" replace />}

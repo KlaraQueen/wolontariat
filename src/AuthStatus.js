@@ -42,7 +42,11 @@ export const AuthStatus = () => {
       ) : (
         <AuthButton
           type="button"
-          onClick={() => loginWithRedirect()}
+          onClick={() =>
+            loginWithRedirect({
+              appState: { returnTo: "/user/dashboard" },
+            })
+          }
           disabled={isLoading}
         >
           <LoginIcon aria-hidden="true" />
